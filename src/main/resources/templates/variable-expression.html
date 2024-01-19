@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thymeleaf "th:text" Attribute And Variable Expressions "${}"</title>
+</head>
+<body>
+    <h1>Thymeleaf "th:text" Attribute And Variable Expressions "${}".</h1>
+    <h2>User Details :</h2>
+    <!-- 
+        Thymeleaf Variable Expression "${}" and "th:text" Attribute : Allows the 
+        Interpolation of Variables (${}) and the Expression of the Result in 
+        Textual Form (th:text)
+    -->
+    <p>User Name : <strong th:text="${user.name}"></strong></p>
+    <p>User Name : <strong th:text="${user.email}"></strong></p>
+    <p>User Name : <strong th:text="${user.role}"></strong></p>
+    <p>User Name : <strong th:text="${user.gender}"></strong></p>
+</body>
+</html>
