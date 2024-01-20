@@ -23,4 +23,20 @@ public class UserController {
         return "variable-expression";
     }
 
+    // Handle Method for "selection-expression" Request
+    // http://localhost:8080/selection-expression
+    @GetMapping("selection-expression")
+    public String selectionExpression(Model model) {
+        User user = User.builder()
+                .name("John Doe")
+                .email("johndoe@gmail.com")
+                .role("ADMIN")
+                .gender("Male")
+                .build();
+
+        model.addAttribute("user", user);
+
+        return "selection-expression";
+    }
+
 }

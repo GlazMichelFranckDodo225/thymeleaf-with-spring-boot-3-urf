@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thymeleaf "th:object" and "th:text" Attributes with Variable "${}" and Selection "*{}" Expressions</title>
+</head>
+
+<body>
+    <h1>Thymeleaf "th:object" and "th:text" Attributes with Variable "${}" and Selection "*{}" Expressions.</h1>
+    <h2>User Details :</h2>
+    <!-- 
+        Thymeleaf "th:object" and "th:text" Attributes with Variable "${}" and Selection "*{}" Expressions : Allows to Display the Fields of a Previously Selected Object.
+    -->
+    <div th:object="${user}">
+        <p>User Name : <strong th:text="*{name}"></strong></p>
+        <p>User Name : <strong th:text="*{email}"></strong></p>
+        <p>User Name : <strong th:text="*{role}"></strong></p>
+        <p>User Name : <strong th:text="*{gender}"></strong></p>
+    </div>
+</body>
+
+</html>
