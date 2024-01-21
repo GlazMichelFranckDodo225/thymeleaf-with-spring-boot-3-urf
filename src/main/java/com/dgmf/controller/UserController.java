@@ -39,4 +39,12 @@ public class UserController {
         return "selection-expression";
     }
 
+    // Handle Method for "message-expression" Request
+    // http://localhost:8080/message-expression
+    @GetMapping("message-expression")
+    public String messageExpression(Model model) {
+
+        return "message-expression";
+    }
+
 }
