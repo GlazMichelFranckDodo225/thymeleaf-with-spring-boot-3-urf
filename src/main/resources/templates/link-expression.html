@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thymeleaf "th:href" Attribute with Link Expression "@{}"</title>
+</head>
+
+<body>
+    <!-- 
+        Thymeleaf "th:href" Attribute with Link Expression "@{}" : 
+        Allows to Display a Url.
+    -->
+    <h1>Thymeleaf "th:href" Attribute with Link Expression "@{}"</h1>
+    <p><a target="_blank" rel="noopener noreferrer" th:href="@{http://localhost:8080/variable-expression}">Variable Expression</a></p>
+    <p><a target="_blank" rel="noopener noreferrer" th:href="@{http://localhost:8080/selection-expression}">Selection Expression</a></p>
+    <p><a target="_blank" rel="noopener noreferrer" th:href="@{http://localhost:8080/message-expression}">Variable Expression</a></p>
+    <p><a target="_blank" rel="noopener noreferrer" th:href="@{http://localhost:8080/link-expression}">Variable Expression</a></p>
+</body>
+
+</html>

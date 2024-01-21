@@ -47,4 +47,11 @@ public class UserController {
         return "message-expression";
     }
 
+    // Handle Method for "link-expression" Request
+    // http://localhost:8080/link-expression
+    @GetMapping("link-expression")
+    public String linkExpression(Model model) {
+
+        return "link-expression";
+    }
 }
