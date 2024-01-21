@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
     // Handle Method for "variable-expression" Request
     // http://localhost:8080/variable-expression
-    @GetMapping("variable-expression")
+    @GetMapping("/variable-expression")
     public String variableExpression(Model model) {
         User user = User.builder()
                 .name("John Doe")
@@ -25,7 +25,7 @@ public class UserController {
 
     // Handle Method for "selection-expression" Request
     // http://localhost:8080/selection-expression
-    @GetMapping("selection-expression")
+    @GetMapping("/selection-expression")
     public String selectionExpression(Model model) {
         User user = User.builder()
                 .name("John Doe")
@@ -41,16 +41,17 @@ public class UserController {
 
     // Handle Method for "message-expression" Request
     // http://localhost:8080/message-expression
-    @GetMapping("message-expression")
-    public String messageExpression(Model model) {
+    @GetMapping("/message-expression")
+    public String messageExpression() {
 
         return "message-expression";
     }
 
     // Handle Method for "link-expression" Request
     // http://localhost:8080/link-expression
-    @GetMapping("link-expression")
+    @GetMapping("/link-expression")
     public String linkExpression(Model model) {
+        model.addAttribute("id", 1);
 
         return "link-expression";
     }
