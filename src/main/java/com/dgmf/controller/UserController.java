@@ -101,4 +101,39 @@ public class UserController {
 
         return "users";
     }
+
+    // Handle Method for Condition Request
+    // http://localhost:8080/condition-expression
+    @GetMapping("/condition-expression")
+    public String conditionExpression(Model model) {
+        User johnDoe = User.builder()
+                .name("John Doe")
+                .email("johndoe@gmail.com")
+                .role("ADMIN")
+                .gender("Male")
+                .build();
+
+        User manuellaLafagas = User.builder()
+                .name("Manuella Lafagas")
+                .email("manuellalafagas@gmail.com")
+                .role("USER")
+                .gender("Female")
+                .build();
+
+        User zoroBi = User.builder()
+                .name("Zoro Bi")
+                .email("zorobi@gmail.com")
+                .role("USER")
+                .gender("Male")
+                .build();
+
+        List<User> users = new ArrayList<>();
+        users.add(johnDoe);
+        users.add(manuellaLafagas);
+        users.add(zoroBi);
+
+        model.addAttribute("users", users);
+
+        return "condition-expression";
+    }
 }
