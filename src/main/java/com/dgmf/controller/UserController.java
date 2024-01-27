@@ -103,9 +103,9 @@ public class UserController {
     }
 
     // Handle Method for Condition Request
-    // http://localhost:8080/condition-expression-if-unless
-    @GetMapping("/condition-expression-if-unless")
-    public String conditionExpression(Model model) {
+    // http://localhost:8080/condition-if-unless
+    @GetMapping("/condition-if-unless")
+    public String conditionIfUnless(Model model) {
         User johnDoe = User.builder()
                 .name("John Doe")
                 .email("johndoe@gmail.com")
@@ -134,6 +134,24 @@ public class UserController {
 
         model.addAttribute("users", users);
 
-        return "condition-expression-if-unless";
+        return "condition-if-unless";
+    }
+
+    // Handle Method for Condition Request
+    // http://localhost:8080/condition-switch-case
+    @GetMapping("/condition-switch-case")
+    public String conditionExpression(Model model) {
+        User user = User.builder()
+                .name("John Doe")
+                .email("johndoe@gmail.com")
+                // .role("ADMIN")
+                // .role("USER")
+                .role("GUEST")
+                .gender("Male")
+                .build();
+
+        model.addAttribute("user", user);
+
+        return "condition-switch-case";
     }
 }
