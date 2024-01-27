@@ -103,8 +103,8 @@ public class UserController {
     }
 
     // Handle Method for Condition Request
-    // http://localhost:8080/condition-expression
-    @GetMapping("/condition-expression")
+    // http://localhost:8080/condition-expression-if-unless
+    @GetMapping("/condition-expression-if-unless")
     public String conditionExpression(Model model) {
         User johnDoe = User.builder()
                 .name("John Doe")
@@ -134,6 +134,6 @@ public class UserController {
 
         model.addAttribute("users", users);
 
-        return "condition-expression";
+        return "condition-expression-if-unless";
     }
 }
