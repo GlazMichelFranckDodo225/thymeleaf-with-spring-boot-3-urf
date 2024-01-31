@@ -33,7 +33,7 @@
                 <input type="radio" id="gender" th:field="*{gender}" value="Female">Female <br>
 
                 <label for="professions">Profession : </label>
-                <select id="professions" th:object="${professions}">
+                <select id="professions" th:field="*{profession}">
                     <option th:each="p : ${professions}" th:value="${p}" th:text="${p}"></option>
                 </select> <br>
 
